@@ -37,7 +37,8 @@ jobs:
         cat <<EOT > /app/configuration.local.json 
         {
           "App": {
-            "EnablePolling": false,
+            "EnablePolling": true,
+            "PollingIntervalSeconds": 3700
             "CheckForUpdates": true,
             "CloseConsoleOnFinish": true
           },
@@ -93,6 +94,7 @@ jobs:
         name: output
         path: ${{ env.OUTPUT_DIR }}
         if-no-files-found: error
+
 
 
 
